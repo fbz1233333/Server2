@@ -3,3 +3,7 @@
 ################################################################################
 
 /.vs/Server2/v15
+/Debug
+/Server2/Debug
+/Server2/x64/Debug/Server2.tlog
+/Server2/x64/Debug
