@@ -2,43 +2,23 @@
 #include <winsock.h>
 #include <thread>
 
-class Client
-{
-private:
-	unsigned int clientSock;
-	SOCKADDR_IN clientAddr;
-	//void* serverArgs;
-	std::thread* listenFunc;
-	char ip[64];
-	bool exist;
-	unsigned int serverSock;
-public:
+namespace RS {
 
-	Client(unsigned int serverSock);
-	~Client();
+	class Client {
+	public:
+		unsigned int clientfd;
+		char ip[64];
+		Client(unsigned int fd, char* ip);
+		template<typename T>
+		int Recv(T* t) {
+			return recv(clientfd, (char*)t, sizeof(T), 0);
+		}
 
-	void Destroy();
-	bool IsExist();
-	bool IsError();
+		template<typename T>
+		int Send(T* t) {
 
-	virtual void CreateListenFunc(std::thread* thread);
-	template<typename T>
-	int Recv(T* t);
+			return send(clientfd,(const char*) t, sizeof(T), 0);
+		}
 
-	template<typename T>
-	void Send(T* t);
-
-	void StopListen();
-};
-
-template<typename T>
-inline int Client::Recv(T * t)
-{
-	return recv(clientSock, (char*)t, sizeof(T), NULL);
-}
-
-template<typename T>
-inline void Client::Send(T * t)
-{
-	send(clientSock, (const char*)t, sizeof(T), NULL);
+	};
 }

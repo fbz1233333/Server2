@@ -30,16 +30,10 @@
     <ClCompile Include="Param1.cpp">
       <Filter>Common</Filter>
     </ClCompile>
-    <ClCompile Include="Exception.cpp">
-      <Filter>Common</Filter>
-    </ClCompile>
     <ClCompile Include="Log.cpp">
       <Filter>Common</Filter>
     </ClCompile>
-    <ClCompile Include="Server2.cpp">
-      <Filter>Common</Filter>
-    </ClCompile>
-    <ClCompile Include="DataStruct.cpp">
+    <ClCompile Include="main.cpp">
       <Filter>Common</Filter>
     </ClCompile>
   </ItemGroup>
@@ -53,13 +47,7 @@
     <ClInclude Include="Param1.h">
       <Filter>Common</Filter>
     </ClInclude>
-    <ClInclude Include="Exception.h">
-      <Filter>Common</Filter>
-    </ClInclude>
     <ClInclude Include="Log.h">
-      <Filter>Common</Filter>
-    </ClInclude>
-    <ClInclude Include="DataStruct.h">
       <Filter>Common</Filter>
     </ClInclude>
   </ItemGroup>

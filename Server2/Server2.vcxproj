@@ -40,7 +40,7 @@
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
@@ -159,8 +159,6 @@
       <SubType>
       </SubType>
     </ClCompile>
-    <ClCompile Include="DataStruct.cpp" />
-    <ClCompile Include="Exception.cpp" />
     <ClCompile Include="Log.cpp" />
     <ClCompile Include="Param1.cpp">
       <SubType>
@@ -170,15 +168,13 @@
       <SubType>
       </SubType>
     </ClCompile>
-    <ClCompile Include="Server2.cpp" />
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Client.h">
       <SubType>
       </SubType>
     </ClInclude>
-    <ClInclude Include="DataStruct.h" />
-    <ClInclude Include="Exception.h" />
     <ClInclude Include="Log.h" />
     <ClInclude Include="Param1.h">
       <SubType>

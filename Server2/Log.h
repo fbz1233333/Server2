@@ -1,7 +1,8 @@
 #pragma once
 #include <iostream>
 
-#define LOGI(fmt, ...) (printf(fmt" \n",__VA_ARGS__))
+#define LOGI(fmt, ...) printf(fmt"\n",__VA_ARGS__)
+
 class Log
 {
 public:
